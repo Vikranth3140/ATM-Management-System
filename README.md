@@ -51,7 +51,7 @@ This project is implemented using Python for the application logic and MySQL for
 4. **Install Dependencies**
 
     ```bash
-    pip install mysql-connector-python
+    pip install requirements.txt
     ```
 
 ### Running the Application
