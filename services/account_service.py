@@ -25,6 +25,12 @@ def update_balance(account_id, amount):
     cursor.close()
     db.close()
 
+def deposit(account_id, amount):
+    if amount > 0:
+        update_balance(account_id, amount)
+        return True
+    return False
+
 def withdraw(account_id, amount):
     account = get_account(account_id)
     if account and account['balance'] >= amount:
@@ -32,8 +38,20 @@ def withdraw(account_id, amount):
         return True
     return False
 
-def deposit(account_id, amount):
-    if amount > 0:
-        update_balance(account_id, amount)
-        return True
-    return False
+def search_account(name):
+    db = get_db_connection()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM accounts WHERE name LIKE %s", ("%"+name+"%",))
+    accounts = cursor.fetchall()
+    cursor.close()
+    db.close()
+    return accounts
+
+def list_all_accounts():
+    db = get_db_connection()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM accounts")
+    accounts = cursor.fetchall()
+    cursor.close()
+    db.close()
+    return accounts
