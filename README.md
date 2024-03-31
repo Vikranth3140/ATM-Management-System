@@ -6,6 +6,8 @@ This project is implemented using Python for the application logic and MySQL for
 
 Check the blog post here - [Dev - From 12th Final Project to an ATM Management System: Leveraging ChatGPT 4 for PDF Analysis](https://dev.to/vikranth3140/from-12th-final-project-to-an-atm-management-system-leveraging-chatgpt-4-for-pdf-analysis-4n0d)
 
+ChatGPT 4 Pompt Chat here - [Prompt Chat](https://chat.openai.com/share/266c6225-9932-4323-a0d0-2cd25e0b0dc9)
+
 ## Features
 
 - **New Account Creation**: Allows users to create a new account by providing a name and PIN.
